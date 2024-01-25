@@ -1,0 +1,23 @@
+---
+import ProjectCard from "./ProjectCard.astro";
+---
+
+<div class="relative mt-6 justify-between items-center bg-gray-900 flex gap-5 px-8 py-5 rounded-[36px] max-md:max-w-full max-md:flex-wrap max-md:mr-2.5 max-md:px-5">
+    <ProjectCard/>
+    <ProjectCard/>
+    <ProjectCard/>
+
+
+
+    <div class="absolute right-0 z-20 h-full rounded-r-[36px] justify-center items-stretch bg-purple flex max-w-[256px] flex-col p-11">
+        <h2 class="text-stone-50 text-6xl font-semibold">See More</h2>
+        <button class="items-center aspect-square bg-red-600 flex flex-col justify-center mt-20 pl-6 pr-14 py-6 rounded-[50%]">
+          <img
+            loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/6ab6818ba5718a6762397a9595dfc9865f36e83876593d3b1044fe009097f7c1?apiKey=730671e7852c4d91bc984b7d2d07d7fb&"
+            class="aspect-square object-contain object-center w-24 overflow-hidden"
+            alt=""
+          />
+        </button>
+      </div>
+</div>
