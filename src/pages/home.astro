@@ -1,0 +1,69 @@
+---
+import Layout from "../layouts/Layout.astro";
+import AboutMe from "../components/AboutMe.astro";
+import WhatIDo from "../components/WhatIDo.astro";
+
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+
+import Talo from "../components/Talo.astro";
+import Belleful from "../components/Belleful.astro";
+import Projects from "../components/Projects.astro";
+
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Welcome to my Space">
+    <Header/>
+    <Hero/>
+
+    <header
+        class="text-red-600 text-8xl font-black tracking-wider bg-gray-900 justify-center mt-14 pl-8 pr-16 py-5 rounded-[36px] items-start max-md:text-4xl max-md:max-w-full max-md:mt-10 max-md:px-5"
+        role="banner"
+    >
+        <h1 class="text-4xl">About.</h1>
+    </header>
+    <section class="w-full grid grid-cols-1 lg:grid-cols-[_35%_65%] gap-3">
+        <AboutMe/>
+
+        <div class="grid grid-cols-1 lg:grid-rows-2 gap-3">
+            <!-- What I use -->
+
+            <div class="flex flex-col gap-3 w-full lg:grid lg:grid-cols-[_2.5fr_1.5fr]">
+                <WhatIDo/>
+                <div class="header justify-center items-stretch bg-white flex grow flex-col w-full p-7 rounded-[75px] max-md:mt-7 max-md:px-5">
+                  <h1 class="text-gray-900 text-6xl font-semibold max-md:text-4xl">See More</h1>
+                  <button
+                    class="items-center bg-red-600 flex flex-col justify-center mt-20 pl-6 pr-14 py-6 rounded-[132px] max-md:mt-10 max-md:px-5"
+                    role="button"
+                  >
+                    <img
+                      loading="lazy"
+                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/67646d36815b428a5981b0adc7baa2bc5c67d3f64829d18bc24a60a4af7937b3?apiKey=730671e7852c4d91bc984b7d2d07d7fb&"
+                      class="aspect-square object-contain object-center w-24 overflow-hidden"
+                      alt="a meaningful description"
+                      aria-label="More information"
+                    />
+                  </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <header
+        class="text-red-600 text-8xl font-black tracking-wider bg-gray-900 justify-center mt-14 pl-8 pr-16 py-5 rounded-[36px] items-start max-md:text-4xl max-md:max-w-full max-md:mt-10 max-md:px-5"
+        role="banner"
+    >
+        <h1 class="text-4xl">Works.</h1>
+    </header>
+
+    <section>
+        <Talo/>
+    </section>
+
+    <Belleful/>
+    <Projects/>
+
+
+    <Footer/>
+</Layout>
