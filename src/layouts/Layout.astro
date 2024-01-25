@@ -16,12 +16,37 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class="px-3 box-border lg:px-5">
 		<slot />
 	</body>
 </html>
 <style is:global>
 	:root {
+		--background: #060F18;
+		--background-tint: #151E27;
+		--red: #FF0000;
+		--red-tint: #FF1E1E;
+		--purple: #8D33FF;
+		--green: #33FF85;
+
+		--tukay-blue: #186568;
+		--tukay-yellow: #D6FB00;
+
+		--clot-purple: #EFC0FF;
+
+		--rent-monie: #C0D5FF;
+
+		--poster-blue: #897BBE;
+		--poster-pink: #FFBCA9;
+		--poster-brown: #FFE6C0;
+
+		--talo-blue: #04152B;
+		--talo-green: #84EE82;
+		--talo-white: #FFFFFF;
+
+		--belleful-yellow: #FECD4C;
+		--belleful-white: #F2EEE7;
+
 		--accent: 136, 58, 234;
 		--accent-light: 224, 204, 250;
 		--accent-dark: 49, 10, 101;
@@ -34,7 +59,7 @@ const { title } = Astro.props;
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background: #13151a;
+		background: var(--background);
 		background-size: 224px;
 	}
 	code {
