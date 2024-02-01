@@ -11,6 +11,18 @@ export default {
 				'purple': 'var(--purple)',
 				'green': 'var(--green)',
 
+			},
+			fontFamily:{
+				'nohemi': [
+					'Nohemi',
+					'Verdana',
+					'sans-serif'
+				],
+				'humane': [
+					'Humane',
+					'Verdana',
+					'sans-serif'
+				]
 			}
 		},
 	},
