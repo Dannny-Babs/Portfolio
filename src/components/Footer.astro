@@ -1,67 +1,34 @@
-<footer class="bg-gray-950 my-10 px-20 py-10 rounded-[37.5px] max-md:max-w-full max-md:mr-2.5 max-md:mt-10 max-md:px-5">
-    <div class="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-      
-        <div class="flex flex-col items-stretch w-[24%] max-md:w-full max-md:ml-0">
-            <img
-                loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/5e4b6b8b777b0cc5965fd37a4be1150b6013199ea34d938a5319f3e7a9e37c5f?apiKey=730671e7852c4d91bc984b7d2d07d7fb&"
-                class="aspect-[5.61] object-contain object-center w-[157px] overflow-hidden shrink-0 max-w-full my-auto max-md:mt-10"
-                alt=""
-            />
-        </div>
+---
+import Socials from "./Socials.astro";
+---
 
-        <div class="flex flex-col items-stretch w-[52%] ml-5 max-md:w-full max-md:ml-0">
-            <nav class="items-stretch flex justify-between gap-5 my-auto max-md:max-w-full max-md:flex-wrap max-md:mt-10">
-                <a href="#" class="text-stone-300 text-2xl font-medium grow whitespace-nowrap">
-                    Home.
-                </a>
-                <a href="#" class="text-red-600 text-2xl">
-                    About.
-                </a>
-                <a href="#" class="text-stone-300 text-2xl">
-                    Works.
-                </a>
-                <a href="#" class="text-white text-2xl grow whitespace-nowrap">
-                    Let&apos;s Talk
-                </a>
-            </nav>
-        </div>
-
-      <div class="flex flex-col items-stretch w-[24%] ml-5 max-md:w-full max-md:ml-0">
-        <div class="items-stretch flex grow gap-4 max-md:mt-10">
-          <button class="items-center bg-red-600 flex aspect-square flex-col justify-center w-12 h-12 px-3 rounded-[34px]">
-            <img
-              loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/c10ed55a6afe87749c7ca06a3cb4b59de81e37ec7be4738418d0ca187346719a?apiKey=730671e7852c4d91bc984b7d2d07d7fb&"
-              class="aspect-square object-contain object-center w-full fill-stone-50 overflow-hidden"
-              alt=""
-            />
-          </button>
-          <button class="items-center bg-red-600 flex aspect-square flex-col justify-center w-12 h-12 px-3.5 rounded-[34px]">
-            <img
-              loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/28f48724b9dc2a2c4fcfbc007b51906f1c2023aa17f301e69c5e0eba66c50200?apiKey=730671e7852c4d91bc984b7d2d07d7fb&"
-              class="aspect-square object-contain object-center w-full overflow-hidden"
-              alt=""
-            />
-          </button>
-          <button class="items-center bg-red-600 flex aspect-square flex-col justify-center w-12 h-12 px-3 rounded-[34px]">
-            <img
-              loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/c50f351df2ae2b33df96683a76b857f549ab7d158bfbf3dc9ea00617bc011a32?apiKey=730671e7852c4d91bc984b7d2d07d7fb&"
-              class="aspect-square object-contain object-center w-full fill-stone-50 overflow-hidden"
-              alt=""
-            />
-          </button>
-          <button class="items-center bg-red-600 flex aspect-square flex-col justify-center w-12 h-12 px-3.5 rounded-[34px]">
-            <img
-              loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/ff6b2717d3cc4055291f42e5acac24003e33bd7af57e449ea61ca225715e181c?apiKey=730671e7852c4d91bc984b7d2d07d7fb&"
-              class="aspect-square object-contain object-center w-full fill-stone-50 overflow-hidden"
-              alt=""
-            />
-          </button>
-        </div>
+<footer class="bg-gray-950 max-md:hidden my-10 px-20 py-10 rounded-[37.5px] max-md:max-w-full max-md:mr-2.5 max-md:mt-10 max-md:px-5">
+  <div class="gap-5 flex max-md:flex-col items-center justify-between max-md:items-stretch max-md:gap-0">
+    
+      <div class="flex flex-col items-stretch w-[24%] max-md:w-full max-md:ml-0">
+        <img
+          loading="lazy"
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/5e4b6b8b777b0cc5965fd37a4be1150b6013199ea34d938a5319f3e7a9e37c5f?apiKey=730671e7852c4d91bc984b7d2d07d7fb&"
+          class="aspect-[5.61] object-contain object-center w-[157px] overflow-hidden shrink-0 max-w-full my-auto max-md:mt-10"
+          alt="DammyDev"
+        />
       </div>
-    </div>
-  </footer>
+
+      <nav class="items-stretch font-nohemi font-medium flex justify-between gap-5 my-auto max-md:max-w-full max-md:flex-wrap max-md:mt-10">
+          <a href="#" class="text-stone-300 text-2xl font-medium grow whitespace-nowrap">
+              Home.
+          </a>
+          <a href="#" class="text-red text-2xl">
+              About.
+          </a>
+          <a href="#" class="text-stone-300 text-2xl">
+              Works.
+          </a>
+          <a href="#" class="text-white text-2xl grow whitespace-nowrap">
+            Let&apos;s Talk
+          </a>
+      </nav>
+
+    <Socials/>
+  </div>
+</footer>
