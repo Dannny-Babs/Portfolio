@@ -1,34 +1,71 @@
+---
+import { Icon } from "astro-icon/components";
+
+const route = Astro.url
+
+const isHome = route.pathname.includes('/');
+const isAbout = route.pathname.includes('about');
+const isWorks = route.pathname.includes('works');
 
 
+
+---
+
+<script>
+    const navElement = document.getElementsByTagName('nav')[0];
+    const menuBtn= document.getElementById('menu-btn');
+
+    menuBtn?.addEventListener('click', () => {
+        if(navElement.classList.contains('flex')) {
+           return navElement.classList.replace('flex', 'hidden')
+        } else if (navElement.classList.contains('hidden')) {
+            return navElement.classList.replace('hidden', 'flex')
+        }
+    })
+</script>
 
 
 <header
-    class="justify-between items-center bg-gray-900 flex gap-5 px-8 py-5 rounded-[36px] max-md:max-w-full max-md:flex-wrap max-md:mr-2.5 max-md:px-5"
+    class="justify-between items-center bg-gray-900 flex gap-5 px-8 py-5 mt-4 rounded-[36px] max-md:max-w-full max-md:flex-wrap max-md:mr-2.5 max-md:px-5"
     aria-label="Header"
     role="banner"
 >
     <img
         loading="lazy"
         src="https://cdn.builder.io/api/v1/image/assets/TEMP/5e4b6b8b777b0cc5965fd37a4be1150b6013199ea34d938a5319f3e7a9e37c5f?apiKey=730671e7852c4d91bc984b7d2d07d7fb&"
-        class="aspect-[5.61] object-contain object-center w-[157px] overflow-hidden shrink-0 max-w-full my-auto"
+        class="aspect-[5.61] max-md:hidden object-contain object-center w-[157px] overflow-hidden shrink-0 max-w-full my-auto"
         alt="Logo"
     />
+
+    <div class="w-full lg:hidden flex items-center justify-between">
+        <img
+            loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/5e4b6b8b777b0cc5965fd37a4be1150b6013199ea34d938a5319f3e7a9e37c5f?apiKey=730671e7852c4d91bc984b7d2d07d7fb&"
+            class="aspect-[5.61] object-contain object-center w-[157px] overflow-hidden shrink-0 max-w-full my-auto"
+            alt="Logo"
+        />
+
+        <button id="menu-btn" class="bg-red p-5 rounded-lg flex items-center justify-center">
+            <Icon name="Hamburger-Menu"/>
+        </button>
+    </div>
+
     <nav
-        class="items-start font-nohemi font-medium self-stretch flex justify-between gap-5 max-md:max-w-full max-md:flex-wrap"
+        class={`items-start font-nohemi font-medium self-stretch hidden lg:flex max-md:flex-col justify-between gap-5 max-md:max-w-full max-md:flex-wrap`}
         aria-label="Navigation"
         role="navigation"
     >
-    <a href="/" class="text-red text-2xl font-medium self-center my-auto">
-        Home.
-    </a>
-    <a href="/about" class="text-stone-300 text-2xl self-center my-auto">
-        About.
-    </a>
-    <a href="/works" class="text-stone-300 text-2xl self-center my-auto">
-        Works.
-    </a>
-    <a class="text-white text-2xl whitespace-nowrap justify-center items-stretch bg-red self-stretch grow px-9 py-5 rounded-2xl max-md:px-5">
-        Let's Talk
-    </a>
+        <a href="/" class={`${isHome ? 'text-red': 'text-stone-300'} text-2xl self-center my-auto`}>
+            Home.
+        </a>
+        <a href="/about" class={`${isAbout ? 'text-red': 'text-stone-300'} text-2xl self-center my-auto`}>
+            About.
+        </a>
+        <a href="/works" class={`${isWorks ? 'text-red': 'text-stone-300'} text-2xl self-center my-auto`}>
+            Works.
+        </a>
+        <a class="text-white text-2xl whitespace-nowrap justify-center items-stretch bg-red self-stretch grow px-9 py-5 rounded-2xl max-md:px-5">
+            Let's Talk
+        </a>
     </nav>
 </header>
