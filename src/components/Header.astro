@@ -3,7 +3,7 @@ import { Icon } from "astro-icon/components";
 
 const route = Astro.url
 
-const isHome = route.pathname.includes('/');
+const isHome = route.pathname == '/';
 const isAbout = route.pathname.includes('about');
 const isWorks = route.pathname.includes('works');
 
