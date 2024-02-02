@@ -1,0 +1,26 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Props {
+    projectTitle: string,
+    titleColor: string,
+
+    subtitle?: string,
+    subtitleColor: string
+}
+
+const { titleColor, projectTitle, subtitle, subtitleColor } = Astro.props
+---
+
+<div class="w-1/2 z-10">
+    <h3 class={`font-semibold text-xl md:text-2xl lg:text-3xl ${titleColor}`}>
+        { projectTitle }
+    </h3>
+    {
+        !!subtitle &&
+        <div class={`flex gap-1 items-center font-light ${subtitleColor}`}>
+            <Icon name="gis:poi-o" />
+            <p>{subtitle}</p>
+        </div>
+    }
+</div>
