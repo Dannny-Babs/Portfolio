@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/check": "^0.4.1",
     "@astrojs/tailwind": "^5.1.0",
+    "@iconify-json/gis": "^1.1.11",
     "@iconify-json/simple-icons": "^1.1.90",
     "astro": "^4.2.1",
     "astro-icon": "^1.0.4",
