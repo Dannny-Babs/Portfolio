@@ -1,0 +1,27 @@
+---
+interface Props {
+    href: string
+}
+
+const { href } = Astro.props;
+---
+
+
+<a href={href} class="justify-between items-center bg-purple flex gap-5 mt-3.5 px-11 py-5 rounded-[36px] max-md:rounded-[25px] max-md:max-w-full max-md:flex-wrap max-md:px-5">
+    <p class="text-stone-50 max-md:text-xl text-3xl font-medium grow">
+        Read Case Study
+    </p>
+    <div
+        class="items-center bg-red self-stretch flex aspect-[1.0208333333333333] flex-col justify-center w-[49px] h-[49px] px-3.5 rounded-[132px]"
+        aria-label="Case Study Button"
+        role="button"
+    >
+        <img
+            loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/1488d1e26a98ab4b5d3cae1cd0af1c0584a38b7d59f8149ed729af057e22eefa?apiKey=730671e7852c4d91bc984b7d2d07d7fb&"
+            class="aspect-square object-contain object-center w-full overflow-hidden"
+            aria-label="Case Study Image"
+            role="img"
+        />
+    </div>
+</a>
