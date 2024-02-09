@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 
 import WorkTitle from "../components/WorkTitle.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="My Works">
@@ -155,7 +156,7 @@ import WorkTitle from "../components/WorkTitle.astro";
                         <p class="font-light max-md:text-lg text-xl">Have a project or opportunity in mind? Let's have a nice chat over it.</p>
                     </div>
 
-                    <a href="/" class="bg-red max-md:w-full ml-auto rounded-2xl w-2/3 flex items-center justify-center">
+                    <a href="/" class="bg-red max-md:w-full max-md:py-2.5 ml-auto rounded-2xl w-2/3 flex items-center justify-center">
                         Let's Talk
                     </a>
                 </div>
@@ -163,7 +164,7 @@ import WorkTitle from "../components/WorkTitle.astro";
         
 
         </div>
-
-
     </section>
+
+    <Footer/>
 </Layout>
