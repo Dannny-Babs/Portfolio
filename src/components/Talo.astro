@@ -1,6 +1,8 @@
+---
+import ReadCaseStudy from '../components/ReadCaseStudy.astro';
+---
 
-
-<section class="grid grid-cols-1 gap-3 lg:grid-cols-[_60%_40%]">
+<section class="grid grid-cols-1 gap-3 font-nohemi lg:grid-cols-[_60%_40%]">
     <!-----
     
         <div class="bg-background-tint grid grid-cols-3 gap-3 w-full p-3 lg:p-4 rounded-[40px]">
@@ -80,7 +82,7 @@
         aria-label="Job Discovery Component"
         role="main"
     >
-        <header class="text-indigo-950 text-4xl font-medium max-md:max-w-full">
+        <header class="text-indigo-950 text-2xl lg:text-4xl font-medium max-md:max-w-full">
             <span class="font-semibold text-indigo-950">Talo</span>{" "}
             <span class="text-indigo-950">
             {" "}
@@ -88,7 +90,7 @@
             </span>
         </header>
 
-        <div class="text-indigo-400 text-2xl font-light mt-3 max-md:max-w-full">
+        <div class="text-indigo-400 font-normal text-[15px] lg:text-2xl md:text-xl mt-3 max-md:max-w-full">
             With Talo, you may start a journey that will change your life.
             Employers can easily access a wide talent pool and expedite their hiring
             process, while job seekers can find targeted employment options and
@@ -97,25 +99,6 @@
             market.
         </div>
 
-        <div>
-            <div class="justify-between items-center bg-purple flex gap-5 mt-3.5 px-11 py-5 rounded-[36px] max-md:max-w-full max-md:flex-wrap max-md:px-5">
-            <a href="#" class="text-stone-50 text-3xl font-medium grow">
-                Read Case Study
-            </a>
-            <button
-                class="items-center bg-red-600 self-stretch flex aspect-[1.0208333333333333] flex-col justify-center w-[49px] h-[49px] px-3.5 rounded-[132px]"
-                aria-label="Case Study Button"
-                role="button"
-            >
-                <img
-                loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/1488d1e26a98ab4b5d3cae1cd0af1c0584a38b7d59f8149ed729af057e22eefa?apiKey=730671e7852c4d91bc984b7d2d07d7fb&"
-                class="aspect-square object-contain object-center w-full overflow-hidden"
-                aria-label="Case Study Image"
-                role="img"
-                />
-            </button>
-            </div>
-        </div>
+        <ReadCaseStudy href='/case-study/talo'/>
     </div>
 </section>
