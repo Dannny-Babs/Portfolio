@@ -1,21 +1,73 @@
+---
+import Socials from './Socials.astro';
+
+interface Props {
+  showMore?: boolean
+}
+
+const { showMore } = Astro.props;
+---
+
 <div class="bg-gray-900 font-nohemi flex grow flex-col w-full px-10 py-7 lg:py-12 rounded-[25px] md:rounded-[50px] lg:rounded-[75px] items-start max-md:max-w-full max-md:mt-7 max-md:px-5">
-    <h1 class="text-orange-200 text-6xl font-semibold self-stretch max-md:max-w-full max-md:text-4xl">
-      About Me
-    </h1>
+    <div class="flex justify-between w-full">
+      <h1 class="text-orange-200 text-6xl max-md:text-2xl font-semibold self-stretch max-md:max-w-full">
+        About Me
+      </h1>
+
+      {
+        !showMore ? null :
+        <a 
+          href="mailto:dbabs297@gmail.com" 
+          class="text-white font-nohemi text-center max-md:text-xs text-xl justify-center items-stretch bg-red self-center my-auto px-9 py-3.5 rounded-[56px] max-md:py-1.5 max-md:px-4">
+          dbabs297@gmail.com
+        </a>
+
+      }
+    </div>
 
     <img 
       loading="lazy" 
       srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/5db2c2e18721442f7ea266d0c44089267606eed01eb3d9a9a67dbb1b87b7e746?apiKey=730671e7852c4d91bc984b7d2d07d7fb&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/5db2c2e18721442f7ea266d0c44089267606eed01eb3d9a9a67dbb1b87b7e746?apiKey=730671e7852c4d91bc984b7d2d07d7fb&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/5db2c2e18721442f7ea266d0c44089267606eed01eb3d9a9a67dbb1b87b7e746?apiKey=730671e7852c4d91bc984b7d2d07d7fb&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/5db2c2e18721442f7ea266d0c44089267606eed01eb3d9a9a67dbb1b87b7e746?apiKey=730671e7852c4d91bc984b7d2d07d7fb&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/5db2c2e18721442f7ea266d0c44089267606eed01eb3d9a9a67dbb1b87b7e746?apiKey=730671e7852c4d91bc984b7d2d07d7fb&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/5db2c2e18721442f7ea266d0c44089267606eed01eb3d9a9a67dbb1b87b7e746?apiKey=730671e7852c4d91bc984b7d2d07d7fb&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/5db2c2e18721442f7ea266d0c44089267606eed01eb3d9a9a67dbb1b87b7e746?apiKey=730671e7852c4d91bc984b7d2d07d7fb&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/5db2c2e18721442f7ea266d0c44089267606eed01eb3d9a9a67dbb1b87b7e746?apiKey=730671e7852c4d91bc984b7d2d07d7fb&"
       class="aspect-square object-contain object-center w-[150px] overflow-hidden max-w-full mt-14 rounded-[50%] max-md:mt-10" 
     />
-    <h2 class="text-white font-normal text-4xl tracking-wide self-stretch mt-6 max-md:max-w-full">
-      Daniel Babalola
-    </h2>
-    <div class="justify-center font-light items-stretch flex gap-1 mt-2">
-      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/0ed291d70db6388f8c3c7e46d271680d73788c48da314d2ada2babe8284b4128?apiKey=730671e7852c4d91bc984b7d2d07d7fb&" class="aspect-square object-contain object-center w-6 overflow-hidden shrink-0 max-w-full" />
-      <span class="text-orange-200 text-xl font-light self-center grow whitespace-nowrap my-auto">Toronto, Canada</span>
+
+    <div class="flex items-center justify-between w-full">
+      <div>
+        <h2 class="text-white font-normal text-4xl max-sm:text-xl max-md:text-2xl tracking-wide self-stretch mt-6 max-md:max-w-full">
+          Daniel Babalola
+        </h2>
+        <div class="justify-center font-light items-stretch flex gap-1 mt-2">
+          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/0ed291d70db6388f8c3c7e46d271680d73788c48da314d2ada2babe8284b4128?apiKey=730671e7852c4d91bc984b7d2d07d7fb&" class="aspect-square object-contain object-center w-6 overflow-hidden shrink-0 max-w-full" />
+          <span class="text-orange-200 text-xl max-md:text-sm font-light self-center grow whitespace-nowrap my-auto">Toronto, Canada</span>
+        </div>
+      </div>
+
+      { showMore && <Socials/> }
     </div>
-    <p class="text-2xl text-white bg-clip-text self-stretch mt-9 mb-3 max-md:max-w-full">
+    <p class="text-2xl max-md:text-lg text-white bg-clip-text self-stretch mt-9 mb-3 max-md:max-w-full">
       I wear many hats, and they all fit perfectly. As a creative designer and front-end developer, I bridge the gap between aesthetics and functionality. I wield code like a paintbrush, crafting pixel-perfect experiences for both web and app with Html, Css, JavaScript and Flutter. Design software like Figma, Adobe XD, and Photoshop are my playground, where I build captivating visuals and user flows.
     </p>
+
+    {
+      showMore && 
+      <>
+        <p class="text-2xl max-md:text-lg text-white/60 bg-clip-text self-stretch max-md:mt-4 mt-9 mb-3 max-md:max-w-full">
+          I'm a passionate creative problem solver with a knack for crafting beautiful and intuitive web experiences that drive results. As a skilled frontend developer, I write clean, elegant code that builds solid and scalable products. But beyond the code, I'm driven by a desire to understand user needs and create solutions that make their lives easier. Whether it's designing a seamless job search platform like Talo or streamlining food delivery through Belleful, I thrive on the challenge of turning complex problems into delightful experiences.
+        </p>
+    
+        <p class="text-2xl max-md:text-lg text-white/60 bg-clip-text self-stretch max-md:mt-4 mt-9 mb-3 max-md:max-w-full">
+          I'm also a student and aspiring techpreneur, constantly pushing myself to learn and grow. In my free time, I channel my creativity into graphic design, crafting eye-catching posters and flyers. My passion for design and tech extends beyond the screen, too - I'm always seeking opportunities to build companies and make a positive impact on the world.
+        </p>
+    
+        <p class="text-2xl max-md:text-lg text-white/60 bg-clip-text self-stretch max-md:mt-4 mt-9 mb-3 max-md:max-w-full">
+          Juggling tasks effortlessly, I thrive under pressure, dedicated to continuous learning and self-improvement. 
+          Communication is my superpower, building strong relationships for optimal outcomes.
+        </p>
+    
+        <p class="text-2xl max-md:text-lg text-white/60 bg-clip-text self-stretch max-md:mt-4 mt-9 mb-3 max-md:max-w-full">
+          This is me - a pixel alchemist, problem solver, and passionate human. Ready to paint your digital canvas, 
+          solve challenges, and make a positive impact, one pixel at a time.
+        </p>      
+      </>
+    }
 </div>
