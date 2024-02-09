@@ -1,0 +1,18 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+
+<div class="items-center bg-white flex gap-2 max-md:px-2.5 px-3.5 py-3 rounded-2xl">
+  <img
+    loading="lazy"
+    src="https://cdn.builder.io/api/v1/image/assets/TEMP/b0935d6d39647313209905a718f8ce0cda1a7d2d6042ddd5eb086ea130335533?apiKey=730671e7852c4d91bc984b7d2d07d7fb&"
+    class="aspect-square object-contain object-center w-6 overflow-hidden shrink-0 max-w-full"
+    alt="Web Design"
+  />
+  <p class="text-gray-900 text-sm md:text-xl lg:text-3xl grow whitespace-nowrap">{ title }</p>
+</div>
