@@ -1,5 +1,12 @@
 ---
 import Socials from "./Socials.astro";
+
+const route = Astro.url
+
+const isHome = route.pathname == '/';
+const isAbout = route.pathname.includes('about');
+const isWorks = route.pathname.includes('works');
+
 ---
 
 <footer class="bg-gray-950 my-10 px-20 py-10 rounded-[37.5px] max-md:max-w-full max-md:mr-2.5 max-md:mt-10 max-md:px-5">
@@ -15,16 +22,16 @@ import Socials from "./Socials.astro";
       </div>
 
       <nav class="items-stretch font-nohemi font-medium flex justify-between gap-5 my-auto max-md:max-w-full max-md:flex-wrap">
-          <a href="#" class="text-stone-300 max-md:text-lg text-2xl font-medium">
-              Home.
+          <a href="#" class={`${isHome ? 'text-red': 'text-stone-300'} max-md:text-lg text-2xl font-medium`}>
+            Home.
           </a>
-          <a href="#" class="text-red max-md:text-lg text-2xl">
-              About.
+          <a href="#" class={`${isAbout ? 'text-red': 'text-stone-300'} max-md:text-lg text-2xl`}>
+            About.
           </a>
-          <a href="#" class="text-stone-300 max-md:text-lg text-2xl">
-              Works.
+          <a href="#" class={`${isWorks ? 'text-red': 'text-stone-300'} max-md:text-lg text-2xl`}>
+            Works.
           </a>
-          <a href="#" class="text-white max-md:text-lg text-2xl whitespace-nowrap">
+          <a href="#" class={`text-white max-md:text-lg text-2xl whitespace-nowrap`}>
             Let&apos;s Talk
           </a>
       </nav>
