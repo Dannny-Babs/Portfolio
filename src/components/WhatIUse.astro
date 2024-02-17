@@ -54,7 +54,7 @@ const skills = [
 
 ---
 
-<div class="bg-green font-nohemi rounded-[25px] md:rounded-[50px] lg:rounded-[75px] box-border py-7 lg:py-12 w-full h-full px-4 lg:px-7">
+<div class="bg-green font-nohemi rounded-[25px] md:rounded-[50px] lg:rounded-[75px] box-border max-md:py-7 lg:pt-12 lg:pb-8 w-full h-full px-4 lg:px-7">
     <h2 class="text-black text-2xl md:text-4xl lg:text-6xl font-semibold whitespace-nowrap max-md:ml-2.5 self-start max-md:text-4xl">
         What I Use
     </h2>
@@ -62,7 +62,7 @@ const skills = [
     <ul class="mt-5 lg:mt-12 grid grid-cols-3 gap-3 lg:grid-cols-4 lg:gap-4 w-full box-border">
         {
             skills.map((skill) => (
-                <li class="bg-red text-white rounded-2xl w-full py-3 px-4 gap-3 flex items-center text-xs sm:text-lg md:text-xl font-normal">
+                <li class="bg-red text-white rounded-2xl w-full py-3 px-4 gap-3 flex items-center whitespace-nowrap text-xs sm:text-lg md:text-xl font-normal">
                     <Icon name={`simple-icons:${skill.icon}`}/>
                     { skill.name }
                 </li>
