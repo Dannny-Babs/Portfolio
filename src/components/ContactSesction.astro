@@ -1,93 +1,61 @@
-<section class="bg-gray-900 ml-3.5 mr-5 mt-16 px-20 py-12 rounded-[37px] max-md:max-w-full max-md:mr-2.5 max-md:mt-10 max-md:px-5">
-    <div class="header">
-      <h1 class="text-white text-6xl font-semibold leading-[64px] tracking-tighter max-md:max-w-full max-md:text-4xl">Let's Connect!</h1>
+---
+import Socials from "./Socials.astro";
+---
+
+<section class="bg-gray-900 font-nohemi grid grid-cols-1 lg:grid-cols-2 max-md:gap-6 mt-16 px-14 py-12 rounded-[37px] max-md:max-w-full max-md:mt-10 max-md:px-5">
+
+  <div class="w-full h-full flex flex-col gap-3 lg:gap-8 justify-center items-start">
+    <h1 class="text-white text-6xl font-semibold leading-[64px] tracking-tighter max-md:max-w-full max-md:text-4xl">
+      Let's Connect!
+    </h1>
+    
+    <div class="text-indigo-200 text-3xl font-medium leading-8 tracking-tighter underline max-md:max-w-full">
+      <span class="text-indigo-200">
+        Have a project or opportunity in mind? Let's have a nice chat over it.{' '}
+      </span>
+      <a
+        href="https://dammydevs.netlify.app/#"
+        class="underline text-indigo-200"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Contact me
+      </a>
+      <span class="text-indigo-200"> here or email me at</span>
     </div>
 
-    <div class="contact-section">
-      <div class="text-indigo-200 text-3xl font-medium leading-8 tracking-tighter underline mt-16 max-md:max-w-full max-md:mt-10">
-        <span class="text-indigo-200">
-          Have a project or opportunity in mind? Let's have a nice chat over it.{' '}
-        </span>
-        <a
-          href="https://dammydevs.netlify.app/#"
-          class="underline text-indigo-200"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Contact me
-        </a>
-        <span class="text-indigo-200"> here or email me at</span>
-      </div>
+    <Socials color="purple"/>
+  </div>
 
-      <div class="contact-form">
 
-        <div class="form-group">
-          <label for="name" class="text-slate-50 text-opacity-80 text-xl leading-6 whitespace-nowrap self-stretch bg-gray-950 justify-center pl-6 pr-16 py-6 rounded-2xl items-start max-md:max-w-full max-md:px-5">
-            Name
-          </label>
-          <input type="text" id="name" aria-label="Name" class="input" />
-        </div>
+  <div class="w-full bg-gray-950 rounded-[32px] flex flex-col gap-3 p-4 lg:p-8">
 
-        <div class="form-group">
-          <label for="email" class="text-slate-50 text-opacity-80 text-xl leading-6 whitespace-nowrap self-stretch bg-gray-950 justify-center mt-4 pl-6 pr-16 py-6 rounded-2xl items-start max-md:max-w-full max-md:px-5">
-            Email
-          </label>
-          <input type="email" id="email" aria-label="Email" class="input" />
-        </div>
+    <input 
+      type="text" 
+      id="name" 
+      aria-label="Name" 
+      class="rounded-xl p-5 h-20 w-full bg-transparent" 
+      placeholder="Name"
+    />
 
-        <div class="form-group">
-          <label for="message" class="text-slate-50 text-opacity-80 text-xl leading-6 whitespace-nowrap self-stretch bg-gray-950 mt-4 pl-6 pr-16 pt-6 pb-20 rounded-2xl items-start max-md:max-w-full max-md:px-5">
-            Type a message....
-          </label>
-          <textarea id="message" aria-label="Message" class="input" />
-        </div>
+    <input 
+      type="email" 
+      id="email" 
+      aria-label="Email" 
+      class="rounded-xl p-5 h-20 w-full bg-transparent" 
+      placeholder="Email"
+    />     
 
-      </div>
-      <button class="text-white text-xl font-semibold leading-6 tracking-normal whitespace-nowrap justify-center items-stretch mt-6 px-10 py-4 rounded-2xl self-start max-md:px-5">
-        Get in Touch
-      </button>
-    </div>
+    <textarea
+      id="message" 
+      aria-label="Message" 
+      class="rounded-xl p-5 w-full h-40 bg-transparent" 
+      placeholder="Type a message..."
+    />
 
-    <div class="contact-icons">
-      <div class="contact-icon">
-        <a href="#">
-          <img
-            loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/143cc96bae1a4ed8e52c6b198e75c8d07ce3a03ea62ed65e34575be4d282cd42?apiKey=730671e7852c4d91bc984b7d2d07d7fb&"
-            alt="Email Icon"
-            class="icon"
-          />
-        </a>
-      </div>
-      <div class="contact-icon">
-        <a href="#">
-          <img
-            loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/067689402c23c57c7be6da2913734cd4f2855cb3336d2042d7c418c7028e5722?apiKey=730671e7852c4d91bc984b7d2d07d7fb&"
-            alt="Phone Icon"
-            class="icon"
-          />
-        </a>
-      </div>
-      <div class="contact-icon">
-        <a href="#">
-          <img
-            loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/3773370bc6641522f3730adaa66f1e59bfcc2f63a7896624671f0a340cbc4d0d?apiKey=730671e7852c4d91bc984b7d2d07d7fb&"
-            alt="Location Icon"
-            class="icon"
-          />
-        </a>
-      </div>
-      <div class="contact-icon">
-        <a href="#">
-          <img
-            loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/8eb5917f34defd12850a2563f4707f9f2d187ebff80322bf17b928fca4862888?apiKey=730671e7852c4d91bc984b7d2d07d7fb&"
-            alt="Social Media Icon"
-            class="icon"
-          />
-        </a>
-      </div>
-    </div>
+    <button class="text-white bg-gradient-to-l from-purple to-indigo-700 text-xl font-semibold leading-6 tracking-normal whitespace-nowrap justify-center items-stretch mt-6 px-10 py-4 rounded-2xl self-start max-md:px-5">
+      Get in Touch
+    </button>
+  </div>    
+
 </section>
