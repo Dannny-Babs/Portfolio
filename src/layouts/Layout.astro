@@ -106,4 +106,20 @@ const { title } = Astro.props;
 		font-weight: 900;
 	}
 
+	.container {
+		@apply py-6 px-5 md:py-9 md:px-7 lg:py-12 lg:px-10 relative rounded-[25px] md:rounded-[40px] lg:rounded-[60px];
+	}
+
+	.two-one-grid {
+		@apply grid grid-cols-1 lg:grid-cols-[_2fr_1fr];
+	}
+
+	.one-two-grid {
+		@apply grid grid-cols-1 lg:grid-cols-[_1fr_2fr];
+	}
+
+	.equal {
+		@apply grid grid-cols-1 lg:grid-cols-2;
+	}
+
 </style>
