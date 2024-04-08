@@ -1,0 +1,144 @@
+---
+import Header from "../../components/Header.astro";
+import Layout from "../../layouts/Layout.astro";
+
+const goals = [
+    {
+        title: 'User-Centric Design',
+        description: `: I aimed to create an intuitive platform by understanding user pain points, resulting in an engaging experience for job seekers and employers.`
+    },
+    {
+        title: 'Streamlined User Journey',
+        description: ` I focused on simplifying job applications, offering personalized recommendations, and ensuring seamless navigation within Talo's ecosystem.`
+    },
+    {
+        title: 'Visual Brand and Identity',
+        description: `Infusing Talo with a distinctive visual identity reflected its mission, forging a memorable and recognizable brand.`
+    },
+    {
+        title: 'Mobile Responsiveness',
+        description: `Recognizing mobile usage, I ensured Talo's platform was flawlessly responsive and optimized for various devices.`
+    },
+    {
+        title: 'Collaboration and Iteration',
+        description: `Beyond design, I actively collaborated with cross-functional teams, refining based on user feedback and platform needs.`
+    },
+
+]
+
+const painPoints = [
+    'Tedious Application Process: Users often face the hassle of repeatedly filling in the same information for different job applications on various platforms.',
+    'Lack of Feedback: Job seekers rarely receive constructive feedback on their applications, leaving them uncertain about their progress and areas for improvement.',
+    'Application Tracking Difficulty: Keeping track of multiple job applications across different platforms becomes overwhelming and disorganized.',
+    'Limited Access to Opportunities: Users struggle to access a wide range of job openings that match their skills and preferences, limiting their chances of finding the right role.',
+    'Time Constraints: The time-consuming process of manually searching and applying for jobs hinders users from exploring more opportunities.',
+    "Unreliable Job Matches: Users often receive irrelevant job suggestions that don't align with their qualifications or career goals."
+]
+---
+
+<Layout title="Talo">
+    <Header/>
+    <section class=" font-nohemi one-two-grid h-[90svh]">
+        <div class="bg-white w-full h-full container">
+            <img src="/talo-logo.svg"/>
+
+            <div class="text-center">
+                <h3 class="font-medium lg:text-3xl">
+                    Job Board & ATS Platform
+                </h3>
+                <h1 class="font-semibold lg:text-[54px]">
+                    UX Case Study
+                </h1>
+            </div>
+
+            <div class="mt-5">
+                <div>
+                    <h4 class="text-green text-2xl font-semibold">About</h4>
+                    <p>
+                        Talo is your all-in-one solution for jobseekers and employers. 
+                        Talo is here to transform your job search and recruitment process, making it 
+                        efficient, effective, and seamless for all.
+                    </p>
+                </div>
+                
+                <h3>
+                    <span class="text-green text-2xl font-semibold">Role:</span> UX Designer/Founder
+                </h3>
+                <h3>
+                    <span class="text-green text-2xl font-semibold">Project Type:</span> Startup Idea
+                </h3>
+                <h3>
+                    <span class="text-green text-2xl font-semibold">Duration:</span> 3 months
+                </h3>
+            </div>
+        </div>
+        <div class="w-full h-full">
+            <img class="w-full" src="/talo-bg.svg"/>
+        </div>
+    </section>
+
+    <section class="two-one-grid font-nohemi lg:h-[130vh]">
+        <div class="grid grid-cols-1 grid-rows-2">
+            <div class="container bg-[#151E27]">
+                <h2>Goals</h2>
+                <ul>
+                    {
+                        goals.map((goal) => (
+                            <li class="text-2xl">
+                                <span class="font-semibold">{goal.title}:</span>
+                                {goal.description}
+                            </li>
+                        ))
+                    }
+                </ul>
+            </div>
+            <div class="container bg-[#04152B]">
+                <h2>Responsibilities</h2>
+                <div>
+                    <img class="mx-auto" src="/my-role.svg"/>
+                    <img src="/responsibilities.svg"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 grid-rows-[2fr_2fr_1fr]">
+            <div class="container bg-green text-[#151E27]">
+                <h2>The Challenge</h2>
+                <p>
+                    The African job market has been plagued by inefficiencies, including the 
+                    cumbersome job application process for candidates and the resource-intensive 
+                    hiring process for employers. Job seekers struggled with repetitive data 
+                    entry and lack of feedback, 
+                    while employers faced difficulty in identifying the right talent quickly
+                </p>
+            </div>
+
+            <img src="/man-in-suit.svg"/>
+
+            <div class="container bg-lime-200">
+                <h2>Design Thinking Process</h2>
+                <img src="/design-thinking.svg"/>
+            </div>
+        </div>
+    </section>
+
+    <section class="equal font-nohemi">
+        <div></div>
+        <div>
+            <div class="container bg-white">
+                <img src="/timeline.svg"/>
+            </div>
+            <div class="container font-semibold text-[#84EE82] bg-[#04152B]">
+                <h2>User's Pain Points</h2>
+                <ul>
+                    {
+                        painPoints.map((point) => (
+                            <li>{point}</li>
+                        ))
+                    }
+                </ul>
+            </div>
+        </div>
+    </section>
+
+</Layout>
