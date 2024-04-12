@@ -9,7 +9,7 @@ const { gridView } = Astro.props;
 ---
 
 
-<section class="bg-purple flex-grow font-nohemi flex flex-col w-full py-7 lg:py-12 rounded-[25px] md:rounded-[50px] lg:rounded-[75px] max-md:max-w-full max-md:px-4 px-7 box-border">
+<section class="bg-purple relative flex-grow font-nohemi flex flex-col w-full py-7 lg:py-12 rounded-[25px] md:rounded-[50px] lg:rounded-[75px] max-md:max-w-full max-md:px-4 px-7 box-border">
   <h2 class="text-stone-50 font-semibold whitespace-nowrap ml-2.5 self-start text-2xl md:text-4xl lg:text-6xl">
     What I Do
   </h2>
@@ -17,20 +17,7 @@ const { gridView } = Astro.props;
   {
     !gridView ?
     <>
-      <div class="relative overflow-x-scroll flex justify-between gap-3.5 mt-14 max-md:max-w-full max-md:flex-wrap max-md:mt-10">
-        <ListItem title='Web Design' />
-        <ListItem title='Motion Graphics'/>    
-      </div>
-    
-      <div class="relative overflow-x-scroll flex items-stretch justify-between gap-3.5 mt-5 max-md:max-w-full max-md:flex-wrap">
-        <ListItem title='UI/UX Design'/>
-        <ListItem title='App Development'/>
-      </div>
-    
-      <div class="relative overflow-x-scroll flex items-stretch justify-between gap-3.5 mt-5 mb-2.5 max-md:max-w-full max-md:flex-wrap">
-        <ListItem title='Graphics Design'/>
-        <ListItem title='Branding'/>    
-      </div>
+      <img src="/what-i-do.svg" class="max-md:mt-7 mt-5"/>
     
     </> 
     : 

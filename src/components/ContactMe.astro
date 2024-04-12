@@ -1,0 +1,49 @@
+---
+import Socials from "./Socials.astro";
+---
+
+<section class="bg-gray-900 font-nohemi px-7 py-6 rounded-[37px] max-md:max-w-full max-md:px-5">
+
+  <div class="flex flex-col gap-3 justify-center items-start">
+    <h1 class="text-white text-4xl font-semibold tracking-tighter max-md:max-w-full max-md:text-3xl">
+      Let's create something special!
+    </h1>
+    
+    <p class="text-indigo-200 text-2xl font-medium  max-md:max-w-full">
+      Have a project or opportunity in mind? Let's have a nice chat over it.{' '}
+    </p>
+
+  </div>
+
+
+  <div class="w-full flex flex-col gap-3">
+
+    <input 
+      type="text" 
+      id="name" 
+      aria-label="Name" 
+      class="rounded-xl p-5 h-20 w-full bg-transparent" 
+      placeholder="Name"
+    />
+
+    <input 
+      type="email" 
+      id="email" 
+      aria-label="Email" 
+      class="rounded-xl p-5 h-20 w-full bg-transparent" 
+      placeholder="Email"
+    />     
+
+    <textarea
+      id="message" 
+      aria-label="Message" 
+      class="rounded-xl p-5 w-full h-40 bg-transparent" 
+      placeholder="Type a message..."
+    />
+
+    <button class="text-white bg-red text-xl font-semibold leading-6 tracking-normal whitespace-nowrap justify-center items-stretch mt-6 px-10 py-4 rounded-2xl self-start max-md:px-5">
+      Let's Talk
+    </button>
+  </div>    
+
+</section>

@@ -1,4 +1,6 @@
 ---
+import ContactMe from "../../components/ContactMe.astro";
+import Footer from "../../components/Footer.astro";
 import Header from "../../components/Header.astro";
 import Layout from "../../layouts/Layout.astro";
 
@@ -38,53 +40,53 @@ const painPoints = [
 
 <Layout title="Talo">
     <Header/>
-    <section class=" font-nohemi one-two-grid h-[90svh]">
+    <section class=" font-nohemi my-3 md:my-5 grid gap-5 grid-cols-1 md:grid-cols-[_35%_65%] h-[90svh]">
         <div class="bg-white w-full h-full container">
-            <img src="/talo-logo.svg"/>
+            <img class="max-md:mr-auto max-md:h-16" src="/talo-logo.svg"/>
 
-            <div class="text-center">
-                <h3 class="font-medium lg:text-3xl">
+            <div class="text-left md:text-center mt-2">
+                <h3 class="font-medium text-xl lg:text-3xl">
                     Job Board & ATS Platform
                 </h3>
-                <h1 class="font-semibold lg:text-[54px]">
-                    UX Case Study
+                <h1 class="font-semibold text-4xl lg:text-[50px]">
+                    UX CASE STUDY
                 </h1>
             </div>
 
-            <div class="mt-5">
+            <div class="mt-5 space-y-2">
                 <div>
-                    <h4 class="text-green text-2xl font-semibold">About</h4>
-                    <p>
+                    <h4 class="text-green text-lg md:text-2xl font-semibold">About</h4>
+                    <p class="md:text-lg">
                         Talo is your all-in-one solution for jobseekers and employers. 
                         Talo is here to transform your job search and recruitment process, making it 
                         efficient, effective, and seamless for all.
                     </p>
                 </div>
                 
-                <h3>
-                    <span class="text-green text-2xl font-semibold">Role:</span> UX Designer/Founder
+                <h3 class="md:text-lg">
+                    <span class="text-green text-lg md:text-2xl font-semibold">Role:</span> UX Designer/Founder
                 </h3>
-                <h3>
-                    <span class="text-green text-2xl font-semibold">Project Type:</span> Startup Idea
+                <h3 class="md:text-lg">
+                    <span class="text-green text-lg md:text-2xl font-semibold">Project Type:</span> Startup Idea
                 </h3>
-                <h3>
-                    <span class="text-green text-2xl font-semibold">Duration:</span> 3 months
+                <h3 class="md:text-lg">
+                    <span class="text-green text-lg md:text-2xl font-semibold">Duration:</span> 3 months
                 </h3>
             </div>
         </div>
-        <div class="w-full h-full">
-            <img class="w-full" src="/talo-bg.svg"/>
+        <div class="h-full">
+            <img class="h-full rounded-[35px]" alt="Talo Background" src="/talo-bg.svg"/>
         </div>
     </section>
 
-    <section class="two-one-grid font-nohemi lg:h-[130vh]">
-        <div class="grid grid-cols-1 grid-rows-2">
-            <div class="container bg-[#151E27]">
-                <h2>Goals</h2>
-                <ul>
+    <section class="two-one-grid gap-5 font-nohemi my-5">
+        <div class="grid grid-cols-1 gap-5 md:grid-rows-2">
+            <div class="container bg-[#151E27] text-white">
+                <h2 class="font-semibold max-md:text-3xl text-4xl mb-3">Goals</h2>
+                <ul class="list-disc mt-2 md:mt-4">
                     {
                         goals.map((goal) => (
-                            <li class="text-2xl">
+                            <li class="text-xl md:text-2xl">
                                 <span class="font-semibold">{goal.title}:</span>
                                 {goal.description}
                             </li>
@@ -93,7 +95,9 @@ const painPoints = [
                 </ul>
             </div>
             <div class="container bg-[#04152B]">
-                <h2>Responsibilities</h2>
+                <h2 class="font-semibold text-[#C0FFCA] mb-3 max-md:text-3xl text-4xl">
+                    Responsibilities
+                </h2>
                 <div>
                     <img class="mx-auto" src="/my-role.svg"/>
                     <img src="/responsibilities.svg"/>
@@ -101,9 +105,11 @@ const painPoints = [
             </div>
         </div>
 
-        <div class="grid grid-cols-1 grid-rows-[2fr_2fr_1fr]">
+        <div class="grid grid-cols-1 gap-5 grid-rows-3">
             <div class="container bg-green text-[#151E27]">
-                <h2>The Challenge</h2>
+                <h2 class="font-semibold max-md:text-3xl text-4xl">
+                    The Challenge
+                </h2>
                 <p>
                     The African job market has been plagued by inefficiencies, including the 
                     cumbersome job application process for candidates and the resource-intensive 
@@ -113,24 +119,58 @@ const painPoints = [
                 </p>
             </div>
 
-            <img src="/man-in-suit.svg"/>
+            <img class="rounded-[35px]" src="/man-in-suit.svg"/>
 
             <div class="container bg-lime-200">
-                <h2>Design Thinking Process</h2>
-                <img src="/design-thinking.svg"/>
+                <h2 class="font-semibold text-3xl">
+                    Design Thinking Process
+                </h2>
+                <img class="mt-7" src="/design-thinking.svg"/>
             </div>
         </div>
     </section>
 
-    <section class="equal font-nohemi">
-        <div></div>
+    <section class="equal gap-5 font-nohemi">
+        <div class="flex flex-col justify-between gap-6">
+            <div>
+                <div class="bg-[#151E27] py-3 px-4 mb-4 lg:py-4 lg:px-5 rounded-[20px] md:rounded-[30px]">
+                    <h2 class="text-green font-bold max-md:text-3xl text-4xl">
+                        Understanding The User
+                    </h2>
+                </div>
+
+                <div class="container bg-green md:h-full">
+                    <h2 class="font-bold text-3xl">User Research</h2>
+                    <p class="font-medium text-xl mt-4">
+                        Hearing from the people I'm creating for is the 
+                        greatest method for me to properly grasp their requirements and motivations. 
+                        So I questioned ten (10) working persons between the ages of 18 and 65 who 
+                        have some experience actively searching for jobs. This virtual interaction involved 
+                        students and professionals, highlighting their diverse backgrounds and career goals.
+                        The study aimed to prioritize user-centered design. These conversations revealed a shared 
+                        desire for meaningful job options and efficient career growth. Beyond time constraints, 
+                        factors like uncertainties, choices, and commitments emerged as crucial. Through this research, 
+                        Talo gains valuable insights into the multifaceted needs of job seekers. We're committed to 
+                        addressing not only time challenges but also deeper concerns, 
+                        ultimately enhancing the job search journey for everyone.
+                    </p>
+                </div>
+
+            </div>
+            <div class="container bg-white">
+                <img class="mx-auto" src="/competition.svg"/>
+            </div>
+        </div>
+
         <div>
             <div class="container bg-white">
-                <img src="/timeline.svg"/>
+                <img class="mx-auto" src="/timeline.svg"/>
             </div>
             <div class="container font-semibold text-[#84EE82] bg-[#04152B]">
-                <h2>User's Pain Points</h2>
-                <ul>
+                <h2 class="font-semibold text-3xl">
+                    User's Pain Points
+                </h2>
+                <ul class="font-medium text-xl mt-4 list-disc">
                     {
                         painPoints.map((point) => (
                             <li>{point}</li>
@@ -140,5 +180,93 @@ const painPoints = [
             </div>
         </div>
     </section>
+
+    <section class="my-4 bg-[#84EE82] font-nohemi max-md:rounded-[25px] rounded-[30px] py-3 px-7 max-md:p-4">
+        <h2 class="font-semibold text-3xl">User Persona</h2>
+        <p class="mt-3">
+            Persona is a fictional character created in representing the users that might 
+            use the brand product in similar way.
+        </p>
+    </section>
+
+    <section class="my-4 grid grid-cols-1 md:grid-cols-2">
+        <img src="/segun-adebayo.svg"/>
+        <img src="/sarah-johnson.svg"/>
+    </section>
+
+    <section class="bg-[#84EE82] font-nohemi my-4 max-md:rounded-[25px] rounded-[30px] py-3 px-7 max-md:p-4">
+        <h2 class="font-semibold text-3xl">User Journey</h2>
+        <p class="mt-3">
+           Map By analyzing the user journey for streamlining the process of hiring and finding jobs on Talo, 
+           I've identified key opportunities to enhance the overall experience. This analysis underscores the importance of 
+           developing intuitive features and tools that simplify and expedite the job search and hiring processes, 
+           ultimately providing users with a seamless and efficient platform for connecting job seekers with employers..
+        </p>
+    </section>
+
+    <section class="">
+        <div class="bg-white p-5 my-4 max-md:p-3 rounded-[25px] md:rounded-[40px] lg:rounded-[60px] w-full">
+            <img src="/user-journey-seeker.svg"/>
+        </div>
+        <div class="grid two-one-grid gap-5 my-5">
+            <div class="container bg-white">
+                <img src="/user-journey-employer.svg"/>
+            </div>
+            
+            <div class="flex flex-col gap-2 font-nohemi my-5">
+                <div class="container bg-[#151E27] text-talo-green">
+                    <h2 class="text-3xl font-semibold">Wireframes</h2>
+                </div>
+                <div class="container bg-talo-green-alt h-full text-white">
+                    <h2 class="text-3xl font-semibold">
+                        Wireframes - Paper Sketch 
+                    </h2>
+                    <p class="text-2xl max-md:text-xl mt-4">
+                        After mapping out the user flow, I started drawing wireframes. 
+                        To make sure that the components that made it to the digital wireframes adequately 
+                        addressed the user pain points, several iterations of each screen were created on paper. 
+                        Hand drawing enables me to visualize how the app will appear. 
+                        Additionally, it enables me to iterate on a layout efficiently and rapidly.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="w-full font-nohemi">
+        <div class="grid one-two-grid my-4 gap-5">
+            <div class="flex flex-col gap-5 justify-between">
+                <div class="container bg-talo-green-alt h-full text-white">
+                    <h2 class="text-4xl max-md:text-3xl font-semibold">Wireframes - Digital</h2>
+                    <p class="text-2xl max-md:text-xl mt-4">
+                        Following that, I converted my first sketches to digital wireframes. 
+                        I then used XD to develop our Lo-Fi wireframes and conduct usability tests 
+                        with my users.
+                    </p>
+                </div>
+                <div class="w-full">
+                    <img class="w-full object-fill" src="/product-designer-role.svg"/>
+                </div>
+            </div>
+
+            <div class="container bg-white">
+                <img src="/lofi-sketch-small.svg"/>
+            </div>
+        </div>
+
+        <div class="bg-white p-5 my-4 max-md:p-3 rounded-[25px] md:rounded-[40px] lg:rounded-[60px] w-full">
+            <img src="/lofi-sketch-big.svg" alt="Talo Low Fidelity Design 2"/>
+        </div>
+    </section>
+
+    <section class="my-6 gap-4 grid grid-cols-1 md:grid-cols-[_2fr_1fr]">
+        <div class="container bg-white">
+            <img src="/typography.svg"/>
+        </div>
+        <ContactMe/>
+    </section>
+
+    <Footer/>
 
 </Layout>
