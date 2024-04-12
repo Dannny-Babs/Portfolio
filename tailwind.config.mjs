@@ -11,7 +11,9 @@ export default {
 				'purple': 'var(--purple)',
 				'green': 'var(--green)',
 				'talo-green-alt': 'var(--talo-green-alt)',
-				'talo-green': 'var(--talo-green)'
+				'talo-green': 'var(--talo-green)',
+				'belleful-yellow': 'var(--belleful-yellow)',
+				'belleful-white': 'var(--belleful-white)',
 
 			},
 			fontFamily:{
