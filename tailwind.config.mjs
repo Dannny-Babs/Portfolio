@@ -10,6 +10,8 @@ export default {
 				'red-tint': 'var(--red-tint)',
 				'purple': 'var(--purple)',
 				'green': 'var(--green)',
+				'talo-green-alt': 'var(--talo-green-alt)',
+				'talo-green': 'var(--talo-green)'
 
 			},
 			fontFamily:{
