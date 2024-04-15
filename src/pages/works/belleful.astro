@@ -3,6 +3,9 @@ import ContactMe from "../../components/ContactMe.astro";
 import Footer from "../../components/Footer.astro";
 import Header from "../../components/Header.astro";
 import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets"
+
+import BellefulBg from "../../assets/belleful/belleful-bg.svg"
 
 const goals = [
     'Make an app that solves problem and easy to use for User.',
@@ -67,7 +70,7 @@ const painPoints = [
             </div>
         </div>
         <div class="md:h-full">
-            <img class="h-full rounded-[35px]" alt="Belleful Background" src="/belleful-bg.svg"/>
+            <Image class="h-full rounded-[35px]" alt="Belleful Background" src={BellefulBg}/>
         </div>
     </section>
 
