@@ -4,6 +4,11 @@ import Header from "../../components/Header.astro";
 
 import WorkTitle from "../../components/WorkTitle.astro";
 import Footer from "../../components/Footer.astro";
+
+import TaloLinkImage from "@/assets/talo-link-image.svg"
+import TukayCard from "@/assets/tukay-card.svg"
+
+import { Image } from "astro:assets"
 ---
 
 <Layout title="My Works">
@@ -11,10 +16,13 @@ import Footer from "../../components/Footer.astro";
 
     <section class="font-nohemi mt-7 lg:mt-12 flex flex-col gap-2 md:gap-4">
         <div class="grid grid-cols-1 lg:grid-cols-[_2fr_1fr] gap-2 lg:gap-4">
-            <img
-                src="/image-4.svg"
-                class="w-full h-full object-contain"
-            />
+            <a href="/works/talo">
+                <Image
+                    src={TaloLinkImage}
+                    class="w-full h-full object-contain"
+                    alt="Talo Link Image"
+                />            
+            </a>
             <div class="bg-[--tukay-blue] max-md:h-[300px] overflow-hidden py-6 px-5 md:py-9 md:px-7 lg:py-12 lg:px-10 relative rounded-[25px] md:rounded-[40px] lg:rounded-[60px]">
                 <WorkTitle
                     titleColor="text-[--tukay-yellow]"
@@ -23,8 +31,9 @@ import Footer from "../../components/Footer.astro";
                     subtitleColor="text-white"
                 />
 
-                <img
-                    src="/image-7.svg"
+                <Image
+                    src={TukayCard}
+                    alt="Tukay Card"
                     class="absolute max-md:-bottom-6 max-md:w-2/3 right-0 bottom-0 object-contain"
                 />
             </div>
