@@ -1,47 +1,49 @@
+---
+import { Image } from "astro:assets";
+import DamiImage4 from "@/assets/dami-image-4.svg"
+import DamiImage5 from "@/assets/dami-image-5.svg"
+
+---
+
 <div class="bg-gray-900 font-nohemi flex grow flex-col w-full px-10 py-7 lg:py-12 rounded-[25px] md:rounded-[50px] lg:rounded-[75px] items-start max-md:max-w-full max-md:px-5">
     <h2 class="text-stone-50 font-semibold whitespace-nowrap ml-2.5 self-start text-2xl md:text-4xl lg:text-6xl">
         Want to see more?
     </h2>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 lg:gap-4 mt-5 lg:mt-7 lg:max-h-screen">
-        <div class="grid grid-cols-2 gap-2 lg:gap-4 h-full">
-            <div class="w-full h-full grid grid-rows-[_35%_65%] gap-2 lg:gap-4">
-                <img
-                    src="/Card 01.svg"
-                    class="w-full h-full"
-                />
-                <img
-                    src="/Card 02.svg"
-                    class="w-full h-full"
-                />
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 lg:gap-4 mt-5 lg:mt-7">
+        <div class="max-w-[710px]">
+            <div class="flex gap-5 max-md:flex-col max-md:gap-0">
+              <div class="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
+                <div class="flex flex-col grow max-md:mt-8">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c8da474f0fd7e49e461710b2a7fe6900386a6aebc668f2adf1855c6832558c4d?apiKey=730671e7852c4d91bc984b7d2d07d7fb&" alt="Image 1" class="w-full aspect-[1.59]" />
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/2064b13785778a68375e13b40a3d420c3ecfe918c3175972894044be542c1be5?apiKey=730671e7852c4d91bc984b7d2d07d7fb&" alt="Image 2" class="mt-8 w-full aspect-[1.01]" />
+                </div>
+              </div>
+              <div class="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e4bc5bc289f7887f030d1515f2e3d6d6948fbb15e93da16aaa43f315fb0ac6a1?apiKey=730671e7852c4d91bc984b7d2d07d7fb&" alt="Image 3" class="grow w-full aspect-[0.59] max-md:mt-8" />
+              </div>
             </div>
-            <img
-                src="/Card 03.svg"
-                class="w-full h-full"
-            />
         </div>
-
-        <div class="flex flex-col gap-2 lg:gap-4">
-            <div class="flex gap-2 lg:gap-4">
-                <img
-                    src="/Card 04.svg"
-                    class="w-1/2 h-full object-contain"
-                />
-                <img
-                    src="/Card 05.svg"
-                    class="w-1/2 h-full"
-                />
+        <div class="flex flex-col flex-wrap max-w-lg h-full">
+            <div class="px-px w-full max-md:max-w-full">
+              <div class="flex gap-4 max-md:flex-col max-md:gap-0">
+                <div class="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
+                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/277d654047ed545e73176beaf0cb43ff694161fff2df757b7c392265d03736c9?apiKey=730671e7852c4d91bc984b7d2d07d7fb&" alt="Image 1" class="grow self-stretch w-full aspect-[0.85] max-md:mt-8" />
+                </div>
+                <div class="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
+                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/e1779c3da6db223d3d607e8e694ad1aec2ccc2987951ad013f1fb69a741d5dfd?apiKey=730671e7852c4d91bc984b7d2d07d7fb&" alt="Image 2" class="grow self-stretch w-full aspect-[0.85] max-md:mt-8" />
+                </div>
+              </div>
             </div>
-
-            <div class="flex gap-2 lg:gap-4">
-                <img
-                    src="/Card 7.svg"
-                    class="w-1/2 h-full"
-                />
-                <img
-                    src="/Card 6.svg"
-                    class="w-1/2 h-full"
-                />
+            <div class="px-px mt-8 w-full max-md:max-w-full">
+              <div class="flex gap-5 max-md:flex-col max-md:gap-0">
+                <div class="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
+                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/6988bbd5fb8455206ce6d4f69c654b6e926fff58c61c5fea7de5ddefd66b4e9e?apiKey=730671e7852c4d91bc984b7d2d07d7fb&" alt="Image 3" class="grow self-stretch w-full aspect-[0.85] max-md:mt-8" />
+                </div>
+                <div class="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
+                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/9f295514829f9c36e3c0eabbc6ec6df0a1921a0e00747651bf22ad20ff13aab0?apiKey=730671e7852c4d91bc984b7d2d07d7fb&" alt="Image 4" class="grow self-stretch w-full aspect-[0.85] max-md:mt-8" />
+                </div>
+              </div>
             </div>
         </div>
 
