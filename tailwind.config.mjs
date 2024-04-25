@@ -4,7 +4,8 @@ export default {
 	theme: {
 		extend: {
 			animation: {
-                "tracking-in-expand": "tracking-in-expand 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000)   both"
+                "tracking-in-expand": "tracking-in-expand 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000)   both",
+				"fade-in-bottom": "fade-in-bottom 1s cubic-bezier(0.390, 0.575, 0.565, 1.000)   both"
             },
             keyframes: {
                 "tracking-in-expand": {
@@ -16,6 +17,16 @@ export default {
                         opacity: ".6"
                     },
                     to: {
+                        opacity: "1"
+                    }
+                },
+				"fade-in-bottom": {
+                    "0%": {
+                        transform: "translateY(50px)",
+                        opacity: "0"
+                    },
+                    to: {
+                        transform: "translateY(0)",
                         opacity: "1"
                     }
                 }
