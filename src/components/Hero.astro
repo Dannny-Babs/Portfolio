@@ -1,27 +1,33 @@
 ---
   //"<h1 class="relative text-stone-50 text-opacity-40 text-center text-3xl font-bold self-center whitespace-nowrap">Photoshop</h1>"
   import Socials from "../components/Socials.astro";
+
+  import { Image } from 'astro:assets';
+  import MobileBackground from '@/assets/hero/mobile-background.svg';
+  import DesktopBackground from '@/assets/hero/desktop-background.svg';
 ---
 
 
-<section class="bg-neutral-500 relative h-[90svh] flex flex-col justify-center items-stretch mt-16 rounded-[36px] max-md:max-w-full max-md:mt-10">
+<section class="bg-neutral-500 relative max-md:h-[90svh] h-[120svh] flex flex-col justify-center items-stretch mt-14 rounded-[36px] max-md:max-w-full max-md:mt-10">
   <!-- Put Background Image Here -->
-  <img 
-    loading="lazy" 
-    src="/desktop-background.svg"
+  <Image 
+    loading="eager" 
+    alt="Desktop Background"
+    src={DesktopBackground}
     class="absolute h-full w-full max-md:hidden rounded-[36px] object-cover object-center inset-0" 
   />
 
-  <img 
-    loading="lazy" 
-    src="/mobile-background.svg"
+  <Image 
+    alt="Mobile Background"
+    loading="eager" 
+    src={MobileBackground}
     class="absolute h-full w-full lg:hidden rounded-[36px] object-cover object-center inset-0" 
   />
 
   
   <div class="flex items-center justify-center flex-col h-full w-full">
     <h2 class="relative text-orange-200 text-5xl font-semibold self-center whitespace-nowrap max-md:text-4xl">Hi there👋</h2>
-    <h3 class="relative text-red lg:text-9xl xl:text-[270px] font-humane font-black tracking-[2.7px] self-center max-md:max-w-full max-md:text-4xl">
+    <h3 class="relative animate-tracking-in-expand text-red lg:text-9xl xl:text-[270px] font-humane font-black tracking-[2.7px] self-center max-md:max-w-full max-md:text-4xl">
       I AM DAMMY
     </h3>
     <p class="relative text-stone-50 text-center text-3xl font-semibold self-center max-w-[746px] max-md:max-w-full">
