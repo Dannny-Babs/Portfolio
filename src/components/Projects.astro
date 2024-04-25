@@ -1,13 +1,39 @@
 ---
 import ProjectCard from "./ProjectCard.astro";
+import Tukay from '@/assets/projects/tukay.svg';
+import Buzz from '@/assets/projects/buzz.svg';
+import Rentmonie from '@/assets/projects/rentmonie.svg';
+import Clot from '@/assets/projects/clot.svg';
+import Rescans from '@/assets/projects/rescans.svg';
+import Moglan from '@/assets/projects/moglan.svg';
+import Loudbites from '@/assets/projects/loudbites.svg';
+import Trance from '@/assets/projects/trance.svg';
+
+
+const projects = [
+  { image: Rentmonie, title: 'Rentmonie', tags: ['UI/UX Design', 'In-Dev'] },
+  { image: Tukay, title: 'Tukay', tags: ['Flutter App', 'UI Project'] },
+  { image: Buzz, title: 'Buzz', tags: ['UI/UX Design', 'Live'] },
+  { image: Clot, title: 'Clot', tags: ['Flutter App', 'In-Dev'] },
+  { image: Rescans, title: 'Rescans', tags: ['Graphics', 'Branding'] },
+  { image: Moglan, title: 'Moglan', tags: ['Graphics', 'Poster'] },
+  { image: Loudbites, title: 'Loudbites', tags: ['Website', 'Live'] },
+  { image: Trance, title: 'Trance', tags: ['UI/UX Design', 'UI Project'] },
+
+]
 ---
 
 <div class="relative mt-6 items-center max-md:bg-white flex-nowrap overflow-hidden bg-gray-900 flex max-md:flex-col gap-4 px-8 py-5 rounded-[36px] max-md:max-w-full max-md:px-0 max-md:pb-0">
-  <div class="w-full flex gap-6 flex-row max-md:pl-8">
-    <ProjectCard/>
-    <ProjectCard/>
-    <ProjectCard/>
-    <ProjectCard/>
+  <div class="w-full flex gap-6 flex-row max-md:pl-8 overflow-x-auto">
+    {
+      projects.map((project) => (
+        <ProjectCard
+          title={project.title}
+          image={project.image}
+          tags={project.tags}
+        />
+      ))
+    }
   </div>
 
 

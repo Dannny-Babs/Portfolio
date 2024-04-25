@@ -1,12 +1,24 @@
+---
+import { Image } from 'astro:assets';
 
+const { image, title, tags } = Astro.props;
+
+interface Props {
+  image: any,
+  title: string,
+  tags: string[]
+}
+---
 
 <div class="bg-[#E0C8FF] rounded-2xl p-4 box-border">
   <div class="flex flex-col gap-1 font-nohemi items-center justify-between">
     <div class="w-full">
-      <img
+      <Image
         loading="lazy"
-        srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/af1607ef3d13aa1537561dfcbbf157c75238c4f16c64edb03ad7aa70d82f64c0?apiKey=730671e7852c4d91bc984b7d2d07d7fb&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/af1607ef3d13aa1537561dfcbbf157c75238c4f16c64edb03ad7aa70d82f64c0?apiKey=730671e7852c4d91bc984b7d2d07d7fb&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/af1607ef3d13aa1537561dfcbbf157c75238c4f16c64edb03ad7aa70d82f64c0?apiKey=730671e7852c4d91bc984b7d2d07d7fb&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/af1607ef3d13aa1537561dfcbbf157c75238c4f16c64edb03ad7aa70d82f64c0?apiKey=730671e7852c4d91bc984b7d2d07d7fb&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/af1607ef3d13aa1537561dfcbbf157c75238c4f16c64edb03ad7aa70d82f64c0?apiKey=730671e7852c4d91bc984b7d2d07d7fb&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/af1607ef3d13aa1537561dfcbbf157c75238c4f16c64edb03ad7aa70d82f64c0?apiKey=730671e7852c4d91bc984b7d2d07d7fb&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/af1607ef3d13aa1537561dfcbbf157c75238c4f16c64edb03ad7aa70d82f64c0?apiKey=730671e7852c4d91bc984b7d2d07d7fb&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/af1607ef3d13aa1537561dfcbbf157c75238c4f16c64edb03ad7aa70d82f64c0?apiKey=730671e7852c4d91bc984b7d2d07d7fb&"
-        class="w-full h-48 object-contain rounded-lg"
+        src={image}
+        width={250}
+        height={85}
+        class="w-[240px] rounded-lg"
         alt="Rental Listing"
       />
     </div>
@@ -15,23 +27,23 @@
     <div class="w-full">
   
       <h3 class="text-3xl font-semibold text-black">
-        Rentmonie
+        {title}
       </h3>
     
       <div class="w-full mt-1 whitespace-nowrap">
         <span
           class="px-3 py-2 mr-4 font-medium rounded-lg text-white bg-red"
-          aria-label="UI/UX Design"
+          aria-label={tags[0]}
           role="button"
         >
-          UI/UX Design
+          {tags[0]}
         </span>
         <span
           class="px-3 py-2 font-medium rounded-lg text-white bg-purple"
-          aria-label="In-Dev"
+          aria-label={tags[1]}
           role="button"
         >
-          In-Dev
+          {tags[1]}
         </span>
       </div>
     </div>
