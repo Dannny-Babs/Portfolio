@@ -16,11 +16,15 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="px-3 w-full box-border lg:px-5">
+	<body class="px-4 w-full box-border lg:px-7 xl:px-9">
 		<slot />
 	</body>
 </html>
 <style is:global>
+	html {
+		scroll-behavior: smooth;
+	}
+	
 	:root {
 		--background: #060F18;
 		--background-tint: #151E27;
