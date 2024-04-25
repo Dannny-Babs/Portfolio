@@ -62,7 +62,7 @@ const skills = [
     <ul class="mt-5 lg:mt-12 grid grid-cols-3 gap-3 lg:grid-cols-4 lg:gap-4 w-full box-border">
         {
             skills.map((skill) => (
-                <li class="bg-red text-white rounded-2xl w-full py-3 px-4 gap-3 flex items-center whitespace-nowrap text-xs sm:text-lg md:text-xl font-normal">
+                <li class="bg-red text-white md:rounded-2xl rounded-lg w-full py-1 px-1.5 md:py-3 md:px-4 gap-3 flex items-center whitespace-nowrap text-xs sm:text-lg md:text-xl font-normal">
                     <Icon name={`simple-icons:${skill.icon}`}/>
                     { skill.name }
                 </li>
