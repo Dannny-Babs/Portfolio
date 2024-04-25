@@ -4,7 +4,7 @@ import Socials from "./Socials.astro";
 
 <section class="bg-gray-900 font-nohemi grid grid-cols-1 lg:grid-cols-2 max-md:gap-6 mt-16 px-14 py-12 rounded-[37px] max-md:max-w-full max-md:mt-10 max-md:px-5">
 
-  <div class="w-full h-full flex flex-col gap-3 lg:gap-8 justify-center items-start">
+  <div class="w-full h-full flex flex-col gap-3 max-sm:gap-5 lg:gap-8 justify-center items-start pr-10">
     <h1 class="text-white text-6xl font-semibold leading-[64px] tracking-tighter max-md:max-w-full max-md:text-4xl">
       Let's Connect!
     </h1>
@@ -28,11 +28,12 @@ import Socials from "./Socials.astro";
   </div>
 
 
-  <div class="w-full bg-gray-950 rounded-[32px] flex flex-col gap-3 p-4 lg:p-8">
+  <form method="POST" action="https://formsubmit.co/fortunealebiosu710@gmail.com" class="w-full bg-gray-950 rounded-[32px] flex flex-col gap-3 p-4 lg:p-8 text-white">
 
     <input 
       type="text" 
       id="name" 
+      name="name"
       aria-label="Name" 
       class="rounded-xl p-5 h-20 w-full bg-transparent" 
       placeholder="Name"
@@ -41,6 +42,7 @@ import Socials from "./Socials.astro";
     <input 
       type="email" 
       id="email" 
+      name="email"
       aria-label="Email" 
       class="rounded-xl p-5 h-20 w-full bg-transparent" 
       placeholder="Email"
@@ -48,6 +50,7 @@ import Socials from "./Socials.astro";
 
     <textarea
       id="message" 
+      name="message"
       aria-label="Message" 
       class="rounded-xl p-5 w-full h-40 bg-transparent" 
       placeholder="Type a message..."
@@ -56,6 +59,6 @@ import Socials from "./Socials.astro";
     <button class="text-white bg-gradient-to-l from-purple to-indigo-700 text-xl font-semibold leading-6 tracking-normal whitespace-nowrap justify-center items-stretch mt-6 px-10 py-4 rounded-2xl self-start max-md:px-5">
       Get in Touch
     </button>
-  </div>    
+  </form>    
 
 </section>
