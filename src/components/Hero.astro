@@ -3,8 +3,10 @@
   import Socials from "../components/Socials.astro";
 
   import { Image } from 'astro:assets';
-  import MobileBackground from '@/assets/hero/mobile-background.svg';
+  import MobileBackground from '@/assets/hero/mobile-background.png';
   import DesktopBackground from '@/assets/hero/desktop-background.svg';
+  import ScrollDown from '@/assets/hero/scroll-down.svg';
+
 ---
 
 
@@ -45,9 +47,10 @@
         dbabs297@gmail.com
       </a>
       
-      <img 
-        loading="lazy" 
-        src="https://cdn.builder.io/api/v1/image/assets/TEMP/8a3ab4064a73e3505d57e1d46a5b3f8d4bf7326a56d9ca61a359cbf2202ddb4f?apiKey=730671e7852c4d91bc984b7d2d07d7fb&" 
+      <Image 
+        loading="eager" 
+        alt="Scroll Down"
+        src={ScrollDown}
         class="aspect-[2.39] object-contain object-center w-[153px] max-sm:w-[71px] overflow-hidden shrink-0 max-w-full" 
       />
 
