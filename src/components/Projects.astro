@@ -1,5 +1,5 @@
 ---
-import ProjectCard from "./ProjectCard.astro";
+import ProjectCard from "./ProjectCard.tsx"
 import Tukay from '@/assets/projects/tukay.svg';
 import Buzz from '@/assets/projects/buzz.svg';
 import Rentmonie from '@/assets/projects/rentmonie.svg';
@@ -23,11 +23,12 @@ const projects = [
 ]
 ---
 
-<div class="relative mt-6 items-center max-md:bg-white flex-nowrap overflow-hidden bg-gray-900 flex max-md:flex-col gap-4 px-8 py-5 rounded-[36px] max-md:max-w-full max-md:px-0 max-md:pb-0">
-  <div class="w-full flex gap-6 flex-row max-md:pl-8 overflow-x-auto no-scrollbar">
+<div class="relative mt-6 items-center max-md:bg-white flex-nowrap overflow-hidden bg-gray-900 flex max-md:flex-col gap-4 px-8 py-5 pt-10 rounded-[36px] max-md:max-w-full max-md:px-0 max-md:pb-0">
+  <div class="w-full flex gap-6 pr-6 flex-row max-md:pl-8 overflow-x-auto no-scrollbar">
     {
       projects.map((project) => (
         <ProjectCard
+          client:load
           title={project.title}
           image={project.image}
           tags={project.tags}
