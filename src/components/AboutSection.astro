@@ -6,7 +6,24 @@ import SectionHeader from "./SectionHeader.astro";
 
 ---
 
-<section class="animate-fade-in-bottom">
+<script>
+    const sections = document.querySelectorAll('section');
+
+    // Create an Intersection Observer
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            // If the section is in view, add the class
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-fade-in-bottom');
+            }
+        });
+    }, { threshold: 0.05 }); // Adjust the threshold according to your needs
+
+    // Start observing the section
+    sections.forEach(section => observer.observe(section));
+</script>
+
+<section>
     <SectionHeader title="About."/>
     <div class="w-full grid grid-cols-1 lg:grid-cols-[_35%_65%] gap-4 md:gap-3">
         <AboutMe/>
