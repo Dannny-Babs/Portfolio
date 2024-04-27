@@ -20,6 +20,24 @@ const { title } = Astro.props;
 		<slot />
 	</body>
 </html>
+
+<script>
+    const sections = document.querySelectorAll('section');
+
+    // Create an Intersection Observer
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            // If the section is in view, add the class
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-fade-in-bottom');
+            }
+        });
+    }, { threshold: 0.05 }); // Adjust the threshold according to your needs
+
+    // Start observing the section
+    sections.forEach(section => observer.observe(section));
+</script>
+
 <style is:global>
 	html {
 		scroll-behavior: smooth;

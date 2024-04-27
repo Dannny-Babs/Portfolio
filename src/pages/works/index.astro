@@ -14,8 +14,8 @@ import { Image } from "astro:assets"
 <Layout title="My Works">
     <Header/>
 
-    <section class="font-nohemi mt-7 lg:mt-12 flex flex-col gap-2 md:gap-4">
-        <div class="grid grid-cols-1 lg:grid-cols-[_2fr_1fr] gap-2 lg:gap-4">
+    <div class="font-nohemi mt-7 lg:mt-12 flex flex-col gap-2 md:gap-4">
+        <section class="grid grid-cols-1 lg:grid-cols-[_2fr_1fr] gap-2 lg:gap-4">
             <a href="/works/talo">
                 <Image
                     src={TaloLinkImage}
@@ -38,9 +38,9 @@ import { Image } from "astro:assets"
                 />
             </div>
 
-        </div>
+        </section>
 
-        <div class="grid gap-2 lg:gap-4 grid-cols-1 lg:grid-cols-[_1fr_2fr]">
+        <section class="grid gap-2 lg:gap-4 grid-cols-1 lg:grid-cols-[_1fr_2fr]">
             <div class="w-full h-full gap-2 lg:gap-4 flex flex-col lg:grid lg:grid-rows-[_2fr_1fr]">
 
                 <div class="box-border max-md:h-[340px] py-6 px-5 md:py-9 md:px-7 lg:py-12 lg:px-10 relative overflow-hidden rounded-[25px] md:rounded-[40px] lg:rounded-[60px] bg-[--clot-purple]">
@@ -78,9 +78,9 @@ import { Image } from "astro:assets"
                 class="w-full h-full object-contain"
             />
 
-        </div>
+        </section>
 
-        <div class="gap-2 lg:gap-4 grid grid-cols-1 lg:grid-cols-[_2fr_1fr]">
+        <section  class="gap-2 lg:gap-4 grid grid-cols-1 lg:grid-cols-[_2fr_1fr]">
             
             <div class="max-md:h-[420px] box-border p-3 md:p-5 flex max-md:flex-col items-start justify-between relative overflow-hidden rounded-[25px] md:rounded-[40px] lg:rounded-[60px] bg-[--rent-monie]">
                 <div class="pl-4 pt-4 box-border max-md:w-full">
@@ -112,9 +112,9 @@ import { Image } from "astro:assets"
                     class="absolute bottom-0 right-0 object-contain"
                 />
             </div>
-        </div>
+        </section>
 
-        <div class="gap-2 lg:gap-4 grid grid-cols-1 lg:grid-cols-[_1fr_2fr]">
+        <section class="gap-2 lg:gap-4 grid grid-cols-1 lg:grid-cols-[_1fr_2fr]">
             
             <div class="box-border max-md:h-[400px] lg:h-full py-6 px-5 md:py-9 md:px-7 lg:py-12 lg:px-10 relative overflow-hidden rounded-[25px] md:rounded-[40px] lg:rounded-[60px] bg-[--poster-blue]">
                 <WorkTitle
@@ -172,8 +172,8 @@ import { Image } from "astro:assets"
             </div>
         
 
-        </div>
-    </section>
+        </section>
+    </div>
 
     <Footer/>
 </Layout>
