@@ -6,7 +6,9 @@ import react from "@astrojs/react";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), icon(), react()],
-  rollupOptions: {
-    external: ['@/assets/talo-link-image.svg'],
-  },
+  build: {
+    rollupOptions: {
+      external: ['@/assets/talo-link-image.svg']
+    }
+  }
 });
