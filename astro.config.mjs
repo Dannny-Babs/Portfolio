@@ -4,11 +4,16 @@ import icon from "astro-icon";
 import react from "@astrojs/react";
 import { fileURLToPath } from 'url';
 import { resolve } from 'path';
+import vercel from '@astrojs/vercel/serverless';
 
 
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), icon(), react()],
+  output: 'server',
+  adapter: vercel({
+    webAnalytics: { enabled: true }
+  }),
 
   // Add the build.rollupOptions configuration
   vite: {
